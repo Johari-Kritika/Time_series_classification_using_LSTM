@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-str1 = "/home/sutdai/Data_Analysis/Timeseries_data/Timeseries"
+str1 = "~/Data_Analysis/Timeseries_data/Timeseries"
 for x in range(11,100):
 	str2 = str1 + str(x) + ".csv"
 	df = pd.read_csv(str2)
@@ -18,5 +18,5 @@ for x in range(11,100):
 	df['Time_in_sec'] = df['Time_in_sec']-value_to_be_subtracted
 	df['Dif_in_time'] = df['Time_in_sec'] - df['Time_in_sec'].shift(-1)
 	df = df[df.Dif_in_time != 0]
-	df.to_csv("/home/sutdai/Data_Analysis/Timeseries_data_No_Duplicates/Timeseries"+str(x)+".csv")
+	df.to_csv("~/Data_Analysis/Timeseries_data_No_Duplicates/Timeseries"+str(x)+".csv")
  
