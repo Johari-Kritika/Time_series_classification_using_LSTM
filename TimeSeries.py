@@ -1,5 +1,5 @@
 import pandas as pd
-str2 = "/home/sutdai/Data_Analysis/NoHeader/NoHeader/KY0"
+str2 = "~/Data_Analysis/NoHeader/NoHeader/KY0"
 for x in range(28,100):
     str1 = str2 + str(x) + ".csv"
     df = pd.read_csv(str1)
@@ -38,7 +38,7 @@ for x in range(28,100):
             if df1['LoadLevel'].iloc[i] < 0:
                 df1['LoadLevel'].iloc[i] = 0
     training_set = df1[['PupilLeft','PupilRight','TimeStamp','LoadLevel']]
-    training_set.to_csv("/home/sutdai/Data_Analysis/Timeseries_data/Timeseries"+str(x)+".csv")
+    training_set.to_csv("~/Data_Analysis/Timeseries_data/Timeseries"+str(x)+".csv")
 
 
 
