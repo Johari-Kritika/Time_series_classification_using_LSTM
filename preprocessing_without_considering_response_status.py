@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing
-str1 = "/home/sutdai/Data_Analysis/Timeseries_data_No_Duplicates/Timeseries"
+str1 = "~/Data_Analysis/Timeseries_data_No_Duplicates/Timeseries"
 def fill_missing_values(some_list,buffer_size):
 	valid_values = []
 	for i in range(0,len(some_list)):
@@ -81,28 +81,5 @@ for x in range(94,95):
 
 
 
-extracted_data_prev = np.zeros([num_of_tasks, max_+1]
-for l in range(0,len(k1)-1):
-	if l%2 ==0:
-		num_of_timestep = k1[l+1] - k1[l]-1
-		extracted_data_prev[l/2,0:num_of_timestep] = df['PupilLeft'].iloc[k1[l]+1:k1[l+1]]
-		extracted_data_prev[l/2,max_] = df['LoadLevel'].iloc[k1[l]+1]
 
-
-
-Calculate the dif_in_load column from this modified column
-find the index of non zero numbers
-Verify the indices from the csv file
-Drop the last indices in the list as it is just NaN
-Count the no. of task that the person answered
-Group in twos to calculate the maximum timesteps a person took.
-Make use of mod 2 
-What is the modulus function in python
-
-
-
-
-
-Declare a numpy array of size [num_of_task, 
-Save the numpy array as a csv file
 
