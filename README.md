@@ -1,4 +1,6 @@
 # 
+
+The extracted segments consisted of variable number of timesteps.
 Dataset Dimension = (1855,1092,1)
 
 Number of timesteps = 1092
