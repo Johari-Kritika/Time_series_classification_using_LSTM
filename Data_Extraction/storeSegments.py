@@ -1,5 +1,9 @@
-
-
+import getDataframe
+import storeSegments
+import pandas as pd
+import numpy as np
+from sklearn import preprocessing
+from numpy import genfromtxt
 	def read_pupil_load(dataframe):
 		df = pd.read_csv(dataframe)
 		countRow = df.shape[0]
