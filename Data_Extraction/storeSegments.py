@@ -1,8 +1,6 @@
-class Store_Segments(object):
-	def __init__(self, dataframe):
-		self.data_folder = dataframe
 
-	def read_pupil_load(self, dataframe):
+
+	def read_pupil_load(dataframe):
 		df = pd.read_csv(dataframe)
 		countRow = df.shape[0]
 		count = 0
