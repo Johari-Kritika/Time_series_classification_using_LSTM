@@ -1,4 +1,9 @@
-
+import getDataframe
+import storeSegments
+import pandas as pd
+import numpy as np
+from sklearn import preprocessing
+from numpy import genfromtxt
 	def extract_relevant_columns(no_header_data_folder,userid):
 		str2 = no_header_data_folder
 		str1 = str2 + "KY"+"{0:03}".format(userid) + ".csv"
