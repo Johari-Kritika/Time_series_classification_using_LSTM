@@ -1,7 +1,3 @@
-class Get_Dataframe(object):
-
-	def __init__(self, data_folder):
-		self.data_folder = data_folder
 
 	def extract_relevant_columns(no_header_data_folder,userid):
 		str2 = no_header_data_folder
@@ -48,7 +44,7 @@ class Get_Dataframe(object):
 		return df
 
 
-	def make_it_periodic(self, relevant_columns_data,userid):
+	def make_it_periodic(relevant_columns_data,userid):
 		df = relevant_columns_data
 		countRow = df.shape[0]
 		time_in_sec = []
@@ -65,3 +61,4 @@ class Get_Dataframe(object):
 		df['Dif_in_time'] = df['Time_in_sec'] - df['Time_in_sec'].shift(-1)
 		df = df[df.Dif_in_time != 0]
 		return df
+
