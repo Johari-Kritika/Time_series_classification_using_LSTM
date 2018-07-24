@@ -1,2 +1,2 @@
-def welcome():
-  print("Welcome")
+def welcome(mystr):
+  print("Welcome"+mystr)
