@@ -9,3 +9,5 @@ Add layers to model
 
 Specify the input dimension in the first layer like (batch_size, timesteps, input_dim).
 
+Padding the data
+
