@@ -3,6 +3,7 @@ Types of models available in keras:
 Types of layers available in keras:
   1. Dense (Fully connected)
   2. LSTM 
+  3. Dropout
 
 Add layers to model
 
