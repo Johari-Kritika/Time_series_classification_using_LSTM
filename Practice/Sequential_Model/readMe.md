@@ -7,4 +7,5 @@ Types of layers available in keras:
 
 Add layers to model
 
-Specify the input dimension in the first layer
+Specify the input dimension in the first layer like (batch_size, timesteps, input_dim).
+
