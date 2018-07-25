@@ -8,7 +8,7 @@ Dataset Dimension = (1855,1092,1)
 
 Number of timesteps = 1092
 
-The difference between each of the timestep is 16ms
+The difference between each of the timestep is 16ms. Such a precise sampling time may result in redundancy in the feature values. So should try using moving average.
 
 Number of samples = 1855
 
