@@ -8,11 +8,12 @@ Dataset Dimension = (1855,1092,1)
 
 Number of timesteps = 1092
 
-The difference between each of the timestep is 16ms. Such a precise sampling time may result in redundancy in the feature values. So should try using moving average.
-
 Number of samples = 1855
 
 Number of features = 1
 
 Removing Noise :
 When the eye was not detected by the eye-tracker, the pupil size was shown as -1 which is an invalid value. Such values have been replaced by the average of the five most recent pupil size values.
+
+Removing Redundancy :
+The difference between each of the timestep is 16ms. Such a precise sampling time may result in redundancy in the feature values. So should try using moving average.
