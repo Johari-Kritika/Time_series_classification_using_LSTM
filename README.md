@@ -14,3 +14,5 @@ Number of samples = 1855
 
 Number of features = 1
 
+Removing Noise :
+When the eye was not detected by the eye-tracker, the pupil size was shown as -1 which is an invalid value. Such values have been replaced by the average of the five most recent pupil size values.
