@@ -6,8 +6,17 @@
 # Column 6 : Diff_in_time
 import pandas as pd
 from sklearn import preprocessing
+import matplotlib.pyplot as plt
 folder_name = "E:/Kyanite/Data Analysis/Testing files/try"
 normal = True
+
+def plot_raw_data(some_list,some_list_1):
+	plt.plot(some_list)
+	plt.plot(some_list_1)
+	plt.show()
+	
+def plot_one_sec_avg_data(some_list, some_list_1):
+	#what if the transition in load is lost due to averaging
 def read_pupil_load(dataframe):
 		df = pd.read_csv(dataframe)
 		countRow = df.shape[0]
