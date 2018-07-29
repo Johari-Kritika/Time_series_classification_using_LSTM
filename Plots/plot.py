@@ -5,8 +5,8 @@
 # Column 5 : Time_in_sec
 # Column 6 : Diff_in_time
 import pandas as pd
-folder_name = ""
-for i in range(0,100):
+folder_name = "E:\Kyanite\Data Analysis\Timeseries_Dataset_Considering_Response_Status\timeseries"
+for i in range(0,12):
   filename = folder_name + str(i) +".csv"   #get the name of the .csv file
   try:
     df = pd.read_csv(filename, header=None)
