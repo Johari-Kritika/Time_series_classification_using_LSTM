@@ -6,6 +6,7 @@
 # Column 6 : Diff_in_time
 import pandas as pd
 folder_name = "E:\Kyanite\Data Analysis\Testing files\try"
+print(folder_name)
 for i in range(1,5):
   filename = folder_name + str(i) +".csv"   #get the name of the .csv file
   try:
