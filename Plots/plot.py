@@ -6,11 +6,11 @@
 # Column 6 : Diff_in_time
 import pandas as pd
 folder_name = "E:\Kyanite\Data Analysis\Timeseries_Dataset_Considering_Response_Status\timeseries"
-for i in range(0,12):
+for i in range(1,12):
   filename = folder_name + str(i) +".csv"   #get the name of the .csv file
   try:
     df = pd.read_csv(filename, header=None)
-    print(i)
+    print(filename)
   except:
     print("Kritika")
   print("It still works")
