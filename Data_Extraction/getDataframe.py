@@ -42,7 +42,7 @@ def extract_relevant_columns(raw_data):
 		  if df1['LoadLevel'].iloc[i] < 0:
 				df1['LoadLevel'].iloc[i] = 0
 	training_set = df1[['PupilLeft','PupilRight','TimeStamp','LoadLevel']]
-	return df
+	return df1
 
 
 
