@@ -14,22 +14,22 @@ def plot_raw_data(some_list,some_list_1):
 def one_sec_data(some_list,some_list_1):
 	count_samples = len(some_list)	#Total number of samples
 	count_load = len(some_list_1)
-	if count_samples != count_load
+	if count_samples != count_load:
 		print("There is some error in the code")
 	sum_pupil_data = 0
 	list_one_sec_pupil_data = []		#The list with sampling rate 1 sec
 	list_one_sec_load_data = []
 	for i in range(0,count_samples):
-		if (i+1)%60:									#Looking for every 60th sample
+		if (i+1)%60==0:									#Looking for every 60th sample
 			avg_pupil_data = sum_pupil_data/60
 			list_one_sec_pupil_data.append(avg_pupil_data)
 			sum_pupil_data = 0
 		else:
 			sum_pupil_data = sum_pupil_data + some_list[i]
 	for i in range(0,count_load):
-		if (i+1)%60:
+		if (i+1)%60==0:
 			list_one_sec_load_data.append(some_list_1[i])
-	return some_list,some_list_1
+	return list_one_sec_pupil_data,list_one_sec_load_data
 
 def plot_one_sec_data(some_list, some_list_1):
 	#what if the transition in load is lost due to averaging
@@ -69,12 +69,13 @@ def make_Plots():
 		df = pd.read_csv(str1)
 		df1 = getDataframe.extract_relevant_columns(df)
 		df2 = getDataframe.make_it_periodic(df1,i)
-		list_pupil_left,list_load_level = storeSegments.read_pupil_load(df1)	
+		list_pupil_left,list_load_level = storeSegments.read_pupil_load(df2)	
 		update_pupil_left = storeSegments.fill_missing_values(list_pupil_left,5)
 		updated_load_level = storeSegments.rectify_response_status(list_load_level)
 		update_pupil_left = np.asarray(update_pupil_left)
 		updated_load_level = np.asarray(updated_load_level)
 		file_1 = "update_pupil_left"+str(i)+".csv"
 		file_2 = "update_load_level"+str(i)+".csv"
-		numpy.savetxt(file_1, update_pupil_left, delimiter=",")
-		numpy.savetxt(file_2, updated_load_level, delimiter=",")
+		np.savetxt(file_1, update_pupil_left, delimiter=",")		#Saving pupil dilation data as a csv file
+		np.savetxt(file_2, updated_load_level, delimiter=",")	#Saving cognitive load data as a csv file
+
